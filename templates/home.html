@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Luxe Clinic | Dashboard</title>
+    <style>
+        body { font-family: 'Helvetica', sans-serif; background: #fff; color: #000; margin: 0; padding: 40px; }
+        .header { border-bottom: 3px solid #000; padding-bottom: 15px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; }
+        .brand { font-size: 24px; font-weight: bold; letter-spacing: 5px; }
+        .btn { background: #000; color: #fff; padding: 12px 24px; text-decoration: none; text-transform: uppercase; font-size: 12px; font-weight: bold; }
+        .btn-outline { border: 1px solid #000; color: #000; padding: 11px 23px; text-decoration: none; text-transform: uppercase; font-size: 12px; margin-left: 10px; }
+        .card { border: 1px solid #eee; padding: 25px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; background: #fafafa; }
+        .stats { font-size: 14px; text-transform: uppercase; color: #666; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="brand">LUXE CLINIC</div>
+        <nav>
+            <a href="/add" class="btn">Register Patient</a>
+            <a href="/call_next" class="btn-outline">Treat Next</a>
+            <a href="/undo" class="btn-outline">Undo Call</a>
+        </nav>
+    </div>
+
+    <div class="stats">TOTAL PATIENTS SEEN TODAY: <strong>{{ total }}</strong></div>
+
+    <h2>Current Waiting List (FIFO)</h2>
+    {% for p in patients %}
+    <div class="card">
+        <div>
+            <strong style="font-size: 18px;">{{ p.name }}</strong><br>
+            <small style="color: #888;">Condition: {{ p.ailment }}</small>
+        </div>
+        <div style="text-align: right;">
+            <span style="font-size: 12px; color: #aaa;">ARRIVED</span><br>
+            <strong>{{ p.arrival_time }}</strong>
+        </div>
+    </div>
+    {% else %}
+    <p style="color: #999; text-align: center; padding: 50px; border: 1px dashed #ccc;">The waiting room is currently empty.</p>
+    {% endfor %}
+</body>
+</html>
