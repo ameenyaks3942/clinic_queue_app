@@ -20,7 +20,7 @@ class ClinicQueue:
     def add_patient(self, name, ailment):
         new_patient = Patient(name, ailment)
         self.queue.append(new_patient)
-
+#ADDS A NEW PATIENT OBJECT T THE QUEUE
     def treat_next(self):
         if self.queue:
             patient = self.queue.pop(0)
