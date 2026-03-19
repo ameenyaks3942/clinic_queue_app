@@ -7,6 +7,7 @@ luxe_clinic = ClinicQueue()
 
 # [span_5](start_span)Requirement: Route 1 - Home Page[span_5](end_span)
 @app.route('/')
+#THIS ROUTE LOADS THE MAIN CLINIC DASHBOARD
 def home():
     return render_template('home.html', 
                            patients=luxe_clinic.queue, 
