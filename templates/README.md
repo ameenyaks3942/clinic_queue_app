@@ -1,5 +1,6 @@
 MATRIC NUMBER: MAAUN/24/DTS/0002
 DEPARTMENT: DATA SCIENCE 
+COURSE CODE: CSC 202
 Welcome To Luxe Clinic Management System!
 • Project Title: Luxe Health Clinic - Queue Management System.
 • Technical Features: Mention the FIFO Queue for patient registration and the LIFO Stack for the "Undo" function.
