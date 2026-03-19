@@ -15,6 +15,7 @@ def home():
 
 # [span_6](start_span)Requirement: Route 2 - Registration Page[span_6](end_span)
 @app.route('/add', methods=['GET', 'POST'])
+#ROUTE TO HANDLE NEW PATIENT POST DATA
 def add_patient():
     if request.method == 'POST':
         name = request.form.get('p_name')
