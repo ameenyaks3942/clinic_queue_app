@@ -34,6 +34,6 @@ def call_next():
 def undo():
     luxe_clinic.undo_action()
     return redirect(url_for('home'))
-
+#BOOTSRAPPING THE FLAS SERVER WITH DEBUG MODE
 if __name__ == '__main__':
     app.run(debug=True)
