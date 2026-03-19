@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for
+#Luxe Clinic Main Application Server
+# from flask import Flask, render_template, request, redirect, url_for
 from models import ClinicQueue
 
 app = Flask(__name__)
