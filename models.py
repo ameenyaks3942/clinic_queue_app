@@ -11,6 +11,7 @@ class Patient:
         return f"{self.name} | Issue: {self.ailment} | Arrived: {self.arrival_time}"
 
 class ClinicQueue:
+    #This class handles the FIFO (First-in-First Out) patient queue)
     def __init__(self):
         self.queue = [] 
         self.history_stack = [] 
