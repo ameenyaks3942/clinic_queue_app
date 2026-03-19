@@ -24,7 +24,7 @@ def add_patient():
             luxe_clinic.add_patient(name, issue)
         return redirect(url_for('home'))
     return render_template('add.html')
-
+#TRIGGERS THE REMOVAL OF THE FIRST PATIENT 
 @app.route('/call_next')
 def call_next():
     luxe_clinic.treat_next()
