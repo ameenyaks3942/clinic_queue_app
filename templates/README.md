@@ -1,3 +1,4 @@
+
 • Project Title: Luxe Health Clinic - Queue Management System.
 • Technical Features: Mention the FIFO Queue for patient registration and the LIFO Stack for the "Undo" function.
 • OOP Implementation: State that you used a Patient class to store data and a ClinicQueue class to manage logic.

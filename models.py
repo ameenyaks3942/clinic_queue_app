@@ -1,4 +1,5 @@
-from datetime import datetime
+#Patient Class For OOP
+# from datetime import datetime
 
 class Patient:
     def __init__(self, name, ailment):
