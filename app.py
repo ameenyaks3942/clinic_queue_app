@@ -1,5 +1,5 @@
 #Luxe Clinic Main Application Server
-# from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for
 from models import ClinicQueue
 
 app = Flask(__name__)
@@ -7,7 +7,6 @@ luxe_clinic = ClinicQueue()
 
 # [span_5](start_span)Requirement: Route 1 - Home Page[span_5](end_span)
 @app.route('/')
-#THIS ROUTE LOADS THE MAIN CLINIC DASHBOARD
 def home():
     return render_template('home.html', 
                            patients=luxe_clinic.queue, 
